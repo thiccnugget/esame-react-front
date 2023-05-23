@@ -1,0 +1,60 @@
+.navlink{
+    color: white;
+}
+
+/* unvisited link */
+.navlink a:link {
+    color: black;
+    text-decoration: none;
+
+}
+
+/* visited link */
+.navlink a:visited {
+    color: black;
+    text-decoration: none;
+
+}
+
+/* mouse over link */
+.navlink a:hover {
+    color: black;
+    text-decoration: none;
+
+}
+
+/* selected link */
+.navlink a:active {
+    color: blue;
+    text-decoration: none;
+
+} 
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* mouse over link */
+a:hover {
+    color: white;
+    text-decoration: none;
+
+}
+
+/* selected link */
+a:active {
+    color: blue;
+    text-decoration: none;
+} 
+
+
