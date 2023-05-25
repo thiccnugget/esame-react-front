@@ -11,6 +11,7 @@ import './link.css';
 import logo from "../assets/logo.png"
 
 function NavBar() {
+
     const submitHandler = (event: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         event.preventDefault(); 
         if(query){
@@ -32,12 +33,10 @@ function NavBar() {
             className="me-auto my-2 my-lg-0"
             navbarScroll
           >
-            <Nav.Link><Link to="/" className='navlink'>Home</Link></Nav.Link>
-            <Nav.Link><Link to="/teams" className='navlink'>Sponsor</Link></Nav.Link>
-        
-            <Nav.Link><Link to="/home" className='navlink'>{login===true ? "Log Out" : "Log In"}</Link></Nav.Link>
+            <Nav.Link><Link to="/" className='navlink'>Home</Link></Nav.Link>        
+            <Nav.Link><Link to="/login" className='navlink'>{login===true ? "Log Out" : "Log In"}</Link></Nav.Link>
             <NavDropdown title={<span className="navlink">Esplora</span>} id="navbarScrollingDropdown" className='navlink'>
-                <NavDropdown.Item href="#action5">Calendario</NavDropdown.Item>
+                <NavDropdown.Item><Link to="/calendar">Calendario</Link></NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item><Link to="/team">Squadre</Link></NavDropdown.Item>
                 <NavDropdown.Item><Link to="/player">Giocatori</Link></NavDropdown.Item>

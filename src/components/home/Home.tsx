@@ -1,37 +1,47 @@
-import React from "react";
 import { Leaderboard } from "./Leaderboard";
-import { HomeCard } from "./HomeCard";
-import { Container, Row } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import games from "../../assets/partite.jpg"
 import teams from "../../assets/squadre.jpeg"
 import players from "../../assets/giocatori.jpeg"
 import bg from "../../assets/bg_index.jpg"
-import "./style.css";
+import { Link } from "react-router-dom";
+import Header from "../../Header";
 
 export const Home = () => {
-    const images = [teams, games, players];
     return (
         <>
-        <Container fluid className="site-blocks-cover overlay" style={{backgroundImage: `url(${bg})`}}>
-            <Container>
-                <div className="row align-items-center justify-content-start">
-                    <div className="col-md-6 text-center text-md-left">
-                        <h1 className="bg-black" style={{width:"50%", color:"white"}}>Dashboard</h1>
-                    </div>
-                </div>
-            </Container>
-        </Container>
+        <Header bgImage={bg} title="Dashboard" />
 
         <Container>
             <Container className="navCards">
                 <div className="row">
-                    {images.map(img=>{
-                        return(
-                            <div className="col-md-6 col-lg-4" >
-                                <HomeCard img={img} />
-                            </div>
-                        )
-                    })}
+                    <div className="col-md-6 col-lg-4" >
+                        <div className="col mb-4 ml-2 mr-2">
+                            <Link to="/team">
+                                <Card style={{ width: '23rem', border: "none"}}>
+                                    <Card.Img variant="top" src={teams} />
+                                </Card>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-4" >
+                        <div className="col mb-4 ml-2 mr-2">
+                            <Link to="/calendar">
+                                <Card style={{ width: '23rem', border: "none"}}>
+                                    <Card.Img variant="top" src={games} />
+                                </Card>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="col-md-6 col-lg-4" >
+                        <div className="col mb-4 ml-2 mr-2">
+                            <Link to="/player">
+                                <Card style={{ width: '23rem', border: "none"}}>
+                                    <Card.Img variant="top" src={players} />
+                                </Card>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </Container>
 

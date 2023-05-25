@@ -127,15 +127,15 @@ export const Leaderboard = () => {
             <thead>
                 <tr className="bg-dark navlink">
                 <th>POS</th>
-                <th>TEAM</th>
-                <th>POINTS</th>
+                <th>SQUADRA</th>
+                <th>PUNTI</th>
                 <th>PG</th>
-                <th>W</th>
-                <th>T</th>
-                <th>L</th>
-                <th>LW</th>
-                <th>LL</th>
-                <th>LD</th>
+                <th>V</th>
+                <th>P</th>
+                <th>S</th>
+                <th>LV</th>
+                <th>LP</th>
+                <th>DL</th>
                 <th>AVG</th>
                 </tr>
             </thead>
